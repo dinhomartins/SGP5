@@ -50,6 +50,10 @@ class InsetAluno{
 	public function setDataNasc($data_nasc){
 		$this->data_nasc = $data_nasc;
 	}
+	//public function setCurso($curso){
+		//$this->curso = $curso;
+	//}
+
 
 	public function InsertDb(){
 		$objDb = new Conect();
@@ -62,9 +66,8 @@ class InsetAluno{
 		$stmt->bindParam(":estado", $this->estado, PDO::PARAM_STR);
 		$stmt->bindParam(":data_nasc", $this->data_nasc, PDO::PARAM_STR);
 		$stmt->execute();
-		//echo "Cadastraod com suceso ";
 		echo "<script type=\"text/javascript\">alert('Cadastrado com sucesso !');</script>";
-		 echo '<meta http-equiv="refresh" content="2;URL=../view/home.php" />';
+		echo '<meta http-equiv="refresh" content="2;URL=../view/home.php" />';
 
 	}
 }
@@ -83,6 +86,7 @@ $aluno->setBairro($bairro);
 $aluno->setCidade($cidade);
 $aluno->setEstado($estado);
 $aluno->setDataNasc($data_nasc);
+//$aluno->setCurso($curso);
 $aluno->InsertDb();
 }
 
