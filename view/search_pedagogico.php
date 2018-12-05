@@ -9,7 +9,6 @@ include('header.php');
 ?>
 
 
-
 	<div class="container">
 		<div class="card" style="width:;">
 			<div class="card-body">
@@ -19,7 +18,7 @@ include('header.php');
 						?></h6>
 				<!--Inicio do corpo  -->
 				<!--Formulario de cadastro -->
-				<form  method="POST">
+				<form  method="POST" action="" >
 					<div class="row">
 						<div class="col-md-12">
 							<div class="form-group">
@@ -34,7 +33,7 @@ include('header.php');
 					</div>
 					<div class="row">
 						<div class="col-md-4">
-							<button class="btn btn-primary"data-toggle="modal" id="btn-submit" name="btn-submit" data-target="#modal-mensagem" type="submit">Pesquisar</button>
+							<button class="btn btn-primary" id="btn-submit" name="btn-submit"  type="submit">Pesquisar</button>
 						</div>
 					</div>
 					<div class="row" style="margin-top: 20px">
@@ -42,7 +41,7 @@ include('header.php');
 							<?php
 							// se o botão for submit carregue a página aqui
 							if(isset($_POST['btn-submit'])){
-								require_once('../controller/search.php');
+								require_once('../controller/search_pedagogico.php');
 							}
 						?>
 						</div>
@@ -54,5 +53,4 @@ include('header.php');
 	
 <?php 
 include('footer.php');
-
  ?>

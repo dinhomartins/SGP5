@@ -27,7 +27,7 @@ class InsetAluno{
 	public $data_nasc;
 
 	public function setNome($nome){
-		$this->nome = $nome;
+		$this->nome = filter_var($nome,FILTER_SANITIZE_STRING);
 	}
 	public function getNome(){
 		return $this->nome;
@@ -73,22 +73,20 @@ class InsetAluno{
 }
 if(isset($_POST['btn-submit'])){
 	$nome = $_POST['nome'];
-$endereco = $_POST['endereco'];
-$bairro = $_POST['bairro'];
-$cidade = $_POST['cidade'];
-$estado = $_POST['estado'];
-$data_nasc = $_POST['data_nasc'];
+	$endereco = $_POST['endereco'];
+	$bairro = $_POST['bairro'];
+	$cidade = $_POST['cidade'];
+	$estado = $_POST['estado'];
+	$data_nasc = $_POST['data_nasc'];
 
-$aluno = new InsetAluno();
-$aluno->setNome($nome);
-$aluno->setEndereco($endereco);
-$aluno->setBairro($bairro);
-$aluno->setCidade($cidade);
-$aluno->setEstado($estado);
-$aluno->setDataNasc($data_nasc);
-//$aluno->setCurso($curso);
-$aluno->InsertDb();
+	$aluno = new InsetAluno();
+	$aluno->setNome($nome);
+	$aluno->setEndereco($endereco);
+	$aluno->setBairro($bairro);
+	$aluno->setCidade($cidade);
+	$aluno->setEstado($estado);
+	$aluno->setDataNasc($data_nasc);
+	//$aluno->setCurso($curso);
+	$aluno->InsertDb();
 }
-
-
 ?>
