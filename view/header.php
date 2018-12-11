@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="style_home.css">
 	<script src="../js/validade_Fields.js"></script>
+	<script  src="../js/jquery-imask.js" ></script>
 	<title>SGP</title>
 </head>
 <body>
@@ -33,7 +34,7 @@
 					<a class="nav-link" href="search_pedagogico.php">Pedagógico</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Turmas</a>
+					<a class="nav-link" href="classes.php">Turmas</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Quadro de Horário</a>
