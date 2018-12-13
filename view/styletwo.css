@@ -1,0 +1,70 @@
+html, body{
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+.completo{
+	background-color: #1c2337;
+    width: 100%;
+    height: 100vh;
+    
+}
+p{
+	color: #fff;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-family: sans-serif;
+}
+
+.box-total1{
+	width: 100%;
+	height: 20vh;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b7ea+0,003d4c+100 */
+background: #00b7ea; /* Old browsers */
+background: -moz-linear-gradient(left, #00b7ea 0%, #003d4c 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #00b7ea 0%,#003d4c 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #00b7ea 0%,#003d4c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#003d4c',GradientType=1 ); /* IE6-9 */
+}
+
+.box-total2{
+	width: 100%;
+	height: 20vh;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e47a66+0,603e59+100 */
+background: #e47a66; /* Old browsers */
+background: -moz-linear-gradient(left, #e47a66 0%, #603e59 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #e47a66 0%,#603e59 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #e47a66 0%,#603e59 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e47a66', endColorstr='#603e59',GradientType=1 ); /* IE6-9 */
+	}
+.box-total3{
+	width: 100%;
+	height: 20vh;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#feb508+1,603e59+100 */
+background: #feb508; /* Old browsers */
+background: -moz-linear-gradient(left, #feb508 1%, #603e59 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #feb508 1%,#603e59 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #feb508 1%,#603e59 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feb508', endColorstr='#603e59',GradientType=1 ); /* IE6-9 */
+}
+.box-total4{
+	width: 100%;
+	height: 20vh;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8173fc+1,603e59+100 */
+background: #8173fc; /* Old browsers */
+background: -moz-linear-gradient(left, #8173fc 1%, #603e59 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #8173fc 1%,#603e59 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #8173fc 1%,#603e59 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8173fc', endColorstr='#603e59',GradientType=1 ); /* IE6-9 */
+}
+
+.box-total5{
+	width: 100%;
+	height: 20vh;
+	background-color: #2e3858;
+}
+.box-grande{
+	width: 100%;
+	height: 40vh;
+	background-color: #2e3858;
+}

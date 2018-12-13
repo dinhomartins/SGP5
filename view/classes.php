@@ -51,8 +51,12 @@ include('header.php');
 					}
 					if(isset($_POST['btn_cad_hour'])){
 						require_once('../controller/classesHour.php');
+						
 					}
+
+
 				?>
+
 			</div>
 		</div>
 	</div>

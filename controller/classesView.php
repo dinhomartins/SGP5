@@ -12,13 +12,28 @@
 			$con = $objDb->ConectMysql();
 			$stmt = $con->prepare("SELECT * FROM turmas");
 			$stmt->execute();
+			echo '';
 			while($result = $stmt->fetch(PDO::FETCH_ASSOC)){
-				echo '<br>';
-				echo $result['curso'];
-				echo ' ';
-				echo $result['dia'];
-				echo ' ';
-				echo $result['sala'];
+				
+				?>
+				<table class="table">
+					  <thead>
+					    <tr>
+					      <th scope="col" style="width: 33%" >Curso</th>
+					      <th scope="col" style="width: 33%">Dia da semana</th>
+					      <th scope="col" style="width: 33%">Sala</th>					      
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row"><?php echo $result['curso']; ?></th>
+					      <td><?php echo $result['dia']; ?></td>
+					      <td><?php echo $result['sala']; ?></td>					      
+					    </tr>
+					  </tbody>
+					</table>
+				<?php
+
 			}
 		}
 	}
