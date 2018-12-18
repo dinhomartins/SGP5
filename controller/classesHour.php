@@ -24,9 +24,9 @@
 		public function ClassRecord(){
 			$objDb = new ConectionDb();
 			$con = $objDb->ConectMysql();
-			$stmt = $con->prepare("INSERT INTO turmas (curso, sala, dia, semana)VALUES(:curso, :sala, :dia, :semana) ");
+			$stmt = $con->prepare("INSERT INTO turmas (curso, dia, semana)VALUES(:curso, :dia, :semana) ");
 			$stmt->bindParam(":curso", $this->curso);
-			$stmt->bindParam(":sala", $this->sala);
+			//$stmt->bindParam(":sala", $this->sala);
 			$stmt->bindParam(":dia", $this->dia);
 			$stmt->bindParam(":semana", $this->horario);
 			$stmt->execute();
@@ -36,7 +36,7 @@
 
 $aluno = new RecordClass();
 $aluno->setCurso($_POST['curso']);
-$aluno->setSala($_POST['sala']);
+//$aluno->setSala($_POST['sala']);
 $aluno->setDia($_POST['dia']);
 $aluno->setHorario($_POST['horario']);
 $aluno->ClassRecord();
