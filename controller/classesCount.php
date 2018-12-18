@@ -5,17 +5,26 @@ class Listar{
 
 	private $name;
 	private $curse;
+	private $dia;
+	private $horario;
 	public function setCurse($curse){
 		$this->curse = $curse;
 	}
 	public function setName($name){
 		$this->name = $name;
 	}
+	public function setDia($dia){
+		$this->dia =$dia;
+	}
+	public function setHorario($horario){
+		$this->horario = $horario;
+	}
 
 	public function ClassesLists(){
 		$con = new PDO("mysql:host=localhost;dbname=sgp", "root", "");
-		$stmt = $con->prepare("SELECT * FROM aluno_curs WHERE CURSE = :curse");
-		$stmt->bindParam(":curse", $this->curse );
+		$stmt = $con->prepare("SELECT * FROM aluno_curs WHERE horario = :horario AND dia = :dia");
+		$stmt->bindParam(":horario", $this->horario );
+		$stmt->bindParam(":dia", $this->dia);
 		$stmt->execute();
 ?>
 			
@@ -44,7 +53,8 @@ class Listar{
 }
 
 $aluno = new Listar();
-$aluno->setCurse('informix');
+$aluno->setHorario('08:00 - 09:00');
+$aluno->setDia('Segunda');
 $aluno->ClassesLists();
 
 ?>
