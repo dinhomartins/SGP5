@@ -24,25 +24,27 @@ class Search{
 		$stmt = $con->prepare("SELECT * FROM cadastro where nome LIKE :nome ");
 		$stmt->bindParam(":nome", $this->nome);
 		$stmt->execute();
-		while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			echo '<table class="table table-bordered">';
-			echo '<thead>';
-				echo '<tr>';
-					echo '<th style="width:5%" scope="col">id</th>';
-					echo '<th style="width:30%" scope="col">Nome</th>';
-					echo '<th scope="col">Ação</th>';
-				echo '</tr>';
-			echo '</thead>';
+?>
 
-			echo '<tbody>';
-				echo '<tr>';
-					echo '<th scope="row">'.$dados['id'].'</th>';
-					echo '<td>'.$dados['nome'].'</td>';
-					echo '<td><a href="../view/view_reg.php?id='.$dados['id'].' " class="btn btn-primary">Visualizar</button> </td>';					
-				echo ' </tr>';
-			echo '</tbody>';
-			echo '</table>';
-		}	
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th style="width:5%" scope="col">id</th>
+				<th style="width:30%" scope="col">Nome</th>
+				<th scope="col">Ação</th>
+			</tr>
+		</thead>
+		<?php while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)): ?>
+			<tbody>
+				<tr>
+					<th scope="row"><?php echo $dados['id'] ?></th>
+					<td><?php echo $dados['nome'] ?></td>
+					<td><a href="../view/view_reg.php?id='.$dados['id'].' " class="btn btn-primary">Visualizar</button> </td>				
+					</tr>
+					<?php endWhile ?>
+				</tbody>
+			</table> 
+<?php
 	}
 }
 

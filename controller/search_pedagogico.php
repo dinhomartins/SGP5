@@ -18,34 +18,32 @@ class Search{
 	public function setNome($nome){
 		$this->nome = '%'.$nome.'%';
 	}
-
+	// Função Busca no banco de dados
 	public function searchAluno(){
 		$objDb = new Conect();
 		$con = $objDb->MysqlCon();
+		
 		$stmt = $con->prepare("SELECT * FROM aluno_curs where NAME LIKE :nome ");
 		$stmt->bindParam(":nome", $this->nome);
 		$stmt->execute();
-		while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)) {
-			echo '<table class="table table-bordered">';
-			echo '<thead>';
-				echo '<tr>';
-					echo '<th scope="col">Nome</th>';
-					echo '<th scope="col">Curso cadastrado</th>';
-				echo '</tr>';
-			echo '</thead>';
-
-			echo '<tbody>';
-				echo '<tr>';
-					echo '<td style="width:50%" >'.$dados['NAME'].'</td>';
-					echo '<td>' .$dados['CURSE']. '</td>';
-					
-
-					 
-					
-				echo ' </tr>';
-			echo '</tbody>';
-			echo '</table>';
-		}	
+		?>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th scope="col">Nome</th>
+					<th scope="col">Curso cadastrado</th>
+				</tr>
+			</thead>
+			<?php while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)): ?> 
+				<tbody>
+					<tr>
+						<td style="width:50%" ><?php echo $dados['NAME'] ?></td>
+						<td><?php echo $dados['CURSE'] ?></td>	
+					</tr>
+					<?php endWhile ?>
+				</tbody>
+			</table>
+			<?php 			
 	}
 }
 
