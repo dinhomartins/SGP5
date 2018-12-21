@@ -68,13 +68,19 @@ class View{
 
 				echo		'<div class="col-md-4">'; // inicio da col
 				echo			'<div class="form-group">';
-				echo				'<label for="exampleInputEmail1" >Horario</label>';
-				echo				'<select class="form-control"  id="horario" name="horario">';
-				echo				'<option value="08:00 - 09:00">08:00 - 09:00</option>';
-				echo				'<option value="09:00 - 10:00">09:00 - 10:00</option>';
-				echo				'<option value="10:00 - 11:00">10:00 - 11:00</option>';
-				echo				'<option value="12:00 - 13:00">11:00 - 12:00</option>';
-				echo				'<option value="14:00 - 15:00">14:00 - 15:00</option>';
+				echo 				'<select class="form-control" id="horario" name="horario">';
+				echo					'<option value="08:00 - 09:00">08:00 - 09:00</option>';
+				echo					'<option value="08:00 - 10:00">08:00 - 10:00</option>';
+				echo					'<option value="08:00 - 11:00">08:00 - 11:00</option>';
+				echo					'<option value="09:00 - 10:00">09:00 - 10:00</option>';
+				echo					'<option value="10:00 - 11:00">10:00 - 11:00</option>';
+				echo					'<option value="10:00 - 12:00">10:00 - 12:00</option>';
+				echo					'<option value="13:00 - 15:00">13:00 - 15:00</option>';
+				echo					'<option value="11:00 - 14:00">11:00 - 14:00</option>';
+				echo					'<option value="14:00 - 15:00">14:00 - 15:00</option>';
+				echo					'<option value="14:00 - 17:00">14:00 - 17:00</option>';
+				echo					'<option value="14:00 - 18:00">14:00 - 18:00</option>';
+				echo					'<option value="18:00 - 20:00">18:00 - 20:00</option>';
 				echo				'</select>';	
 				echo			'</div>';
 				echo		'</div>'; // fim da col

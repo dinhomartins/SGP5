@@ -29,6 +29,7 @@ include('header.php');
 						<option value="informix">informix</option>
 						<option value="Cabelereiro">Cabelereiro</option>
 						<option value="Interativo">Interativo</option>
+						<option value="Eletricista">Eletricista</option>
 					</select>
 				</div>
 				<button class="btn btn-primary btn-search" id="btn-search" name="btn-search" type="submit">Pesquisar</button>
