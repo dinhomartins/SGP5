@@ -11,7 +11,39 @@
 	
 	<script src="../js/validade_Fields.js"></script>
 	<script  src="../js/jquery-imask.js" ></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type="text/javascript" src="../js/grafico.js" ></script>
+
 	<title>SGP</title>
+	<script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      <?php $n1=130 ?>
+      var n1 = <?php echo $n1 ?>;
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Quantidade', 'modulos (in millions)'],
+          ['Vagas', 240], ['Alunos ativos', n1]
+
+        ]);
+
+        var options = {
+          title: '',
+          legend: 'none',
+          pieSliceText: 'label',
+          slices: {  4: {offset: 0.2},
+                    12: {offset: 0.3},
+                    14: {offset: 0.4},
+                    15: {offset: 0.5},
+          },
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+      }
+    </script>
+
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,10 +67,13 @@
 					<a class="nav-link" href="search_pedagogico.php">Pedagógico</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="classes.php">Turmas</a>
+					<a class="nav-link" href="classes.php">Cadastrar Turma</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Quadro de Horário</a>
+					<a class="nav-link" href="classes2.php">Pesquisar por Turma</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="quadroHorario.php">Quadro de Horário</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="logOut.php">Sair</a>

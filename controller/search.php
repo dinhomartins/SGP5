@@ -25,7 +25,7 @@ class Search{
 		$stmt->bindParam(":nome", $this->nome);
 		$stmt->execute();
 ?>
-
+	<!-- Tabela com resultado da busca -->
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -39,7 +39,7 @@ class Search{
 				<tr>
 					<th scope="row"><?php echo $dados['id'] ?></th>
 					<td><?php echo $dados['nome'] ?></td>
-					<td><a href="../view/view_reg.php?id='.$dados['id'].' " class="btn btn-primary">Visualizar</button> </td>				
+					<td><a href="../view/view_reg.php?id=<?php echo $dados['id']?>" class="btn btn-primary">Visualizar</button> </td>				
 					</tr>
 					<?php endWhile ?>
 				</tbody>

@@ -26,7 +26,9 @@ class Search{
 		$stmt = $con->prepare("SELECT * FROM aluno_curs where NAME LIKE :nome ");
 		$stmt->bindParam(":nome", $this->nome);
 		$stmt->execute();
+		
 		?>
+
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -37,12 +39,13 @@ class Search{
 			<?php while ($dados = $stmt->fetch(PDO::FETCH_ASSOC)): ?> 
 				<tbody>
 					<tr>
-						<td style="width:50%" ><?php echo $dados['NAME'] ?></td>
+						<td style="width:50%" ><?php echo $dados['NAME'] ?> </td>
 						<td><?php echo $dados['CURSE'] ?></td>	
 					</tr>
 					<?php endWhile ?>
 				</tbody>
 			</table>
+			
 			<?php 			
 	}
 }

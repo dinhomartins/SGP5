@@ -8,15 +8,12 @@
 
 		private $turma;
 
-		public function setCurso($curso){
-			$this->curso = $curso;
-		}
+		
 
 		public function TurmasView(){
 			$objDb = new ConectionDb();
 			$con = $objDb->ConectMysql();
-			$stmt = $con->prepare("SELECT * FROM turmas WHERE curso = :curso");
-			$stmt->bindParam(":curso", $this->curso);
+			$stmt = $con->prepare("SELECT * FROM turmas");
 			$stmt->execute();
 			?>
 			
@@ -46,6 +43,5 @@
 		}
 	}
 	$turma = new ViewTurmas();
-	$turma->setCurso($_POST['escolha']);
 	$turma->TurmasView();
 ?>
