@@ -22,7 +22,7 @@ include('../controller/quadroHorario.php');
 				 ?>
 			</div>
 			<div class="footer_box">
-
+				
 			</div>
 		</div>
 		<div class="col-md-3">
@@ -68,23 +68,9 @@ include('../controller/quadroHorario.php');
 	<!-- Fim da linha quadro de horario -->
 
 
-	<!-- nova linha  -->
-	<div class="row" style="padding-top: 40vh;">
-		<div class="col-md-3">
-			<div class="box-media">
-				<div class="header-box">
-					
-				</div>
-				<div id="piechart" style="width: 100%;">
-			</div>
-		</div>
-	</div>
 
 </div>
-</div>
-<div class="bg2">
 
-</div>
 <?php 
 include('footer.php');
 ?>

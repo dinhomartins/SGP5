@@ -37,11 +37,9 @@
 					      <td><a href="../controller/classesCount.php?curso=<?php echo $result['curso']; ?>&dia=<?php echo $result['dia'] ?>&horario=<?php echo $result['semana']; ?>" class="btn btn-primary">Visualizar</a></td>					      
 					    </tr>
 					    <?php endWhile ?>
-					  </tbody>
-					</table>
-				<?php
-
-			
+					</tbody>
+				</table>
+				<?php			
 		}
 	}
 	$turma = new ViewTurmas();

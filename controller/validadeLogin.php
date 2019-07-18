@@ -2,7 +2,9 @@
 // Inicio sessão
     session_start(); 
     // verifica se esta logado
-    if(!isset($_SESSION['user'])){   
+    if(isset($_SESSION['user'])){   
+        
+    }else{
         header('Location: index.php?erro=1');
     }
 require_once('db.class.php');

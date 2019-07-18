@@ -17,7 +17,6 @@ class QuadroHorario{
 		$horario = '08:00 - 09:00';
 		$stmt->execute();
 		$total = $stmt->rowCount();
-
 		echo $total;
 	}
 
